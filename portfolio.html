@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERSONAL PORTFOLIO</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #263238;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #172554;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 18px 7%;
+        }
+
+        nav h2 {
+            color: #67e8f9;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #67e8f9;
+        }
+
+       
+        #about {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #dbeafe, #ede9fe);
+        }
+
+        #about h1 {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        #about h1 span {
+            color: #4f46e5;
+        }
+
+        #about h3 {
+            margin-bottom: 15px;
+        }
+
+        #about p {
+            max-width: 650px;
+            margin: 0 auto 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4f46e5;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #3730a3;
+        }
+
+        
+        section {
+            padding: 60px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #172554;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+       
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: white;
+            color: #4338ca;
+            border: 1px solid #c7d2fe;
+            padding: 14px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px #00000010;
+        }
+
+    
+        #projects {
+            background-color: #eef2ff;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px #00000012;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #3730a3;
+            margin: 10px 0;
+        }
+
+        .project-icon {
+            font-size: 38px;
+        }
+
+        .tech {
+            margin-top: 15px;
+            color: #4f46e5;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+    
+        .education-card {
+            max-width: 650px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border-left: 5px solid #4f46e5;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px #00000010;
+        }
+
+        .education-card h3 {
+            color: #3730a3;
+        }
+
+       
+        #contact {
+            text-align: center;
+            background-color: #e0f2fe;
+        }
+
+        #contact p {
+            margin: 10px 0;
+        }
+
+        #contact a {
+            color: #3730a3;
+            text-decoration: none;
+        }
+
+        
+        footer {
+            text-align: center;
+            background-color: #172554;
+            color: white;
+            padding: 20px;
+        }
+
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            #about h1 {
+                font-size: 32px;
+            }
+
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .project-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav ul li a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <h2><i>My Portfolio</i></h2>
+
+            <ul>
+                <li><a href="#home">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="about">
+        <h1><I>PRIYADHARSHINI</I></h1>
+        <h3>Front-End Developer</h3>
+
+        <p>
+            I am a passionate student interested in web development
+            and technology. 
+        </p>
+
+        <a href="#projects" class="btn">View My Projects</a>
+    </section>
+
+    
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+        </div>
+    </section>
+
+<section id="projects">
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="project-gallery">
+
+        <div class="project-card">
+            <div class="project-icon"></div>
+            <h3>Library Management System</h3>
+            <p>
+                A website to manage library books, student details,
+                and book issue and return records.
+            </p>
+            <p class="tech">HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon"></div>
+            <h3>Personal Expense Tracker</h3>
+            <p>
+                A simple application to record daily expenses
+                and track spending.
+            </p>
+            <p class="tech">HTML, CSS, JavaScript</p>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon"></div>
+            <h3>Online Examination System</h3>
+            <p>
+                A website for student exam registration,
+                subject selection, and examination details.
+            </p>
+            <p class="tech">HTML, CSS, JavaScript</p>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="education">
+        <h2 class="section-title">My Education</h2>
+
+        <div class="education-card">
+            <h3>BE (CSE) AIML</h3>
+            <p>KGISL INSTUTION OF TECHNOLOGY</p>
+            <p>2025 - 2029</p>
+            <p>
+                Learning programming, web development,
+                and computer science fundamentals.
+            </p>
+        </div>
+    </section>
+
+   
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>Feel free to contact me for projects and opportunities.</p>
+        <p>Email: <a href="mailto:priyadharshinia232007@gmail.com">priyadharshinia232007@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Visit My GitHub</a></p>
+    </section>
+
+
+    <footer>
+        <p>© 2026 My Personal Portfolio | Created using HTML5 and CSS3</p>
+    </footer>
+
+</body>
+</html>
